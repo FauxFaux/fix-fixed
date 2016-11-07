@@ -1,11 +1,11 @@
-const uniqueClass = 'fix_fixed_c508296f6012bbff2ea27a7e090e457079c72b7974ca85f25cbf9b87e3e6b5cd';
-const styleTagId = 'style_for_' + uniqueClass;
+var uniqueClass = 'fix_fixed_c508296f6012bbff2ea27a7e090e457079c72b7974ca85f25cbf9b87e3e6b5cd';
+var styleTagId = 'style_for_' + uniqueClass;
 
 var allNodes = document.getElementsByTagName("*");
 
 var toRemove = [];
 
-const hatred = function (style) {
+var hatred = function (style) {
     return style.position && 'fixed' == style.position;
 };
 
@@ -27,10 +27,10 @@ toRemove.forEach(node => {
 });
 
 if (!document.getElementById(styleTagId)) {
-    const styleTag = document.head.appendChild(document.createElement("style"));
+    var styleTag = document.head.appendChild(document.createElement("style"));
     styleTag.type = 'text/css';
     styleTag.id = styleTagId;
-    const css =
+    var css =
         '.' + uniqueClass + ':before,' +
         '.' + uniqueClass + ':after { ' +
         '  position: initial !important' +
